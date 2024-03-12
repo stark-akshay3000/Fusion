@@ -242,19 +242,6 @@ class HostelInventory(models.Model):
 
     def __str__(self):
         return self.inventory_name
-<<<<<<< HEAD
-
-# class HostelAllotment(models.Model):
-#     hall = models.ForeignKey(Hall, on_delete=models.CASCADE)
-#     hostel_name = models.CharField(max_length=100)  # Assuming hostel_name is a CharField
-#     assigned_warden = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-#     assigned_caretaker = models.ForeignKey(Staff, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return f"{self.hall} - {self.hostel_name}"
-=======
->>>>>>> 36e85f079cc07c75588a36c0a7f7e990a9a36b24
-    
 
 class HostelLeave(models.Model):
     student_name = models.CharField(max_length=100)
@@ -289,10 +276,6 @@ class HostelAllotment(models.Model):
     def __str__(self):
         return str(self.hall)+ str(self.assignedCaretaker)+str(self.assignedWarden) + str(self.assignedBatch)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 36e85f079cc07c75588a36c0a7f7e990a9a36b24
 class StudentDetails(models.Model):
     id = models.CharField(primary_key=True, max_length=20)
     first_name = models.CharField(max_length=100,blank=True,null=True)
@@ -307,11 +290,7 @@ class StudentDetails(models.Model):
     address = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
-<<<<<<< HEAD
-      return self.first_name + ' ' + self.last_name
-=======
-      return self.first_name
->>>>>>> 36e85f079cc07c75588a36c0a7f7e990a9a36b24
+      return self.first_name 
 
 
 
